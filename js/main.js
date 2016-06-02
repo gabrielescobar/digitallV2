@@ -276,7 +276,7 @@ $(document).ready(function() {
 	});
 
 	openMap.on('click', function(e){
-		iframeCode='<iframe class="pos-a-t-l full-size google-map" src="https://www.google.cl/maps/place/Airmatek+-+Consultora+de+Marketing+Digital/@-33.4263945,-70.6170171,15z/data=!4m5!3m4!1s0x0:0xf1ac1f1ea5e24cdf!8m2!3d-33.4263945!4d-70.6170171"  frameborder="0" style="border:0" allowfullscreen></iframe>"'
+		iframeCode='<iframe class="pos-a-t-l full-size google-map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCo7OXHH3sjuNoOWEarvpLGk_rFveWHKcg&q=Airmatek+-+Consultora+de+Marketing+Digital/@-33.4263945,-70.6170171,15z/data=!4m5!3m4!1s0x0:0xf1ac1f1ea5e24cdf!8m2!3d-33.4263945!4d-70.6170171"  frameborder="0" style="border:0" allowfullscreen></iframe>"'
 		$('.contact-image').append(iframeCode);
 	});
 
@@ -590,6 +590,16 @@ if ($('.home').length) {
 	$('.main-nav li:nth-child(2) a').addClass('js-open-pano-content');
 	$('.main-nav li:nth-child(2) a').attr('data-n', '2');
 	$('.main-nav li:nth-child(2) a').attr('href', '#');
+
+	$('.main-nav li:nth-child(3) a').removeClass('js-button-transition');
+	$('.main-nav li:nth-child(3) a').addClass('js-open-pano-content');
+	$('.main-nav li:nth-child(3) a').attr('data-n', '3');
+	$('.main-nav li:nth-child(3) a').attr('href', '#');
+
+	$('.main-nav li:nth-child(4) a').removeClass('js-button-transition');
+	$('.main-nav li:nth-child(4) a').addClass('js-open-pano-content');
+	$('.main-nav li:nth-child(4) a').attr('data-n', '4');
+	$('.main-nav li:nth-child(4) a').attr('href', '#');
 	$(document).ready(function() {
 
 		sizeHandler();
@@ -598,8 +608,8 @@ if ($('.home').length) {
 		startMouseY = halfWindowHeight;
 		registerHomeNodes(1);
 
-		$(".project-nav li:nth-child(1) h5").text('Title');
-		$(".project-nav li:nth-child(2) h5").text('Type');
+		$(".project-nav li:nth-child(1) h5").text(' ');
+		$(".project-nav li:nth-child(2) h5").text(' ');
 
 		setTimeout(function(){
 		   	typeFormatting();
