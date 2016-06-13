@@ -545,7 +545,7 @@ if ($('.work-list-nav').length) {
 }
 
 if ($('.work').length) {
-	$('.main-nav li:nth-child(3)').addClass('active');
+	$('.main-nav li:nth-child(4)').addClass('active');
 	currentPage = 'work';
 	currentProjects = 1;
 	registerProject(0);
@@ -600,6 +600,11 @@ if ($('.home').length) {
 	$('.main-nav li:nth-child(4) a').addClass('js-open-pano-content');
 	$('.main-nav li:nth-child(4) a').attr('data-n', '4');
 	$('.main-nav li:nth-child(4) a').attr('href', '#');
+
+	$('.main-nav li:nth-child(5) a').removeClass('js-button-transition');
+	$('.main-nav li:nth-child(5) a').addClass('js-open-pano-content');
+	$('.main-nav li:nth-child(5) a').attr('data-n', '5');
+	$('.main-nav li:nth-child(5) a').attr('href', '#');
 	$(document).ready(function() {
 
 		sizeHandler();
