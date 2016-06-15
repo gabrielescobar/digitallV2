@@ -319,7 +319,7 @@ $(document).ready(function() {
 			videoId:videoID,
             startSeconds:videoStartPoint
         });
-		$('.director-showcases .lockup h4').text(newDirectorVidContent[6]);
+		$('.director-showcases .lockup h4').text(newDirectorVidContent[7]);
 		$('.directors').addClass('showcase-active-left');
 		
 		setTimeout(function(){
@@ -342,7 +342,7 @@ $(document).ready(function() {
 			videoId:videoID,
             startSeconds:videoStartPoint
         });
-		$('.director-showcases .lockup h4').text(newDirectorVidContent[6]);
+		$('.director-showcases .lockup h4').text(newDirectorVidContent[7]);
 		$('.directors').addClass('showcase-active-right');
 		
 		setTimeout(function(){
@@ -588,13 +588,14 @@ if ($('.home').length) {
 	// $('.main-nav li:nth-child(2)').addClass('active');
 	$('.main-nav li:nth-child(2) a').removeClass('js-button-transition');
 	$('.main-nav li:nth-child(2) a').addClass('js-open-pano-content');
-	$('.main-nav li:nth-child(2) a').attr('data-n', '2');
+	$('.main-nav li:nth-child(2) a').attr('data-n', '1');
 	$('.main-nav li:nth-child(2) a').attr('href', '#');
 
 	$('.main-nav li:nth-child(3) a').removeClass('js-button-transition');
 	$('.main-nav li:nth-child(3) a').addClass('js-open-pano-content');
-	$('.main-nav li:nth-child(3) a').attr('data-n', '3');
+	$('.main-nav li:nth-child(3) a').attr('data-n', '2');
 	$('.main-nav li:nth-child(3) a').attr('href', '#');
+
 
 	$('.main-nav li:nth-child(4) a').removeClass('js-button-transition');
 	$('.main-nav li:nth-child(4) a').addClass('js-open-pano-content');
@@ -646,6 +647,7 @@ if ($('.home').length) {
 }
 
 function registerHomeNodes(n) {
+	console.log(n);
 	// // CREATE ONE PROJECT VARIABLE SET
 	// homeNodeID = $('.perch-info-nodes li:nth-child('+n+')').attr('data-home-node-id');
 	homeNodeX = $('.perch-info-nodes li:nth-child('+n+')').attr('data-position-x');
@@ -657,7 +659,7 @@ function registerHomeNodes(n) {
 	homeNodeContentP =  $('.perch-info-nodes li:nth-child('+n+') p.perch-info-overlay-p').html();
 	allHomeNodes[n] = [n, homeNodeX, homeNodeY, homeNodeTitleOne, homeNodeTitleTwo, homeNodeContent, homeNodeContentP, n];
 
-	if (n != 10) {
+	if (n != 25) {
 		// REPEAT FILLING PROJECT VARS UNTIL ALL ARE DONE
 		repeatn = n + 1;
 		registerHomeNodes(repeatn);
@@ -674,7 +676,7 @@ function populateNodes(n) {
 	$('.overlay-nodes .pano-icon:nth-child('+n+') h5').text(thisNodeInfo[4]);
 	$('.overlay-nodes .pano-icon:nth-child('+n+') h4').text(thisNodeInfo[3]);
 	nextNode = n+1;
-	if (nextNode == 7) {
+	if (nextNode == 20) {
 
 	} else {
 		populateNodes(nextNode);
