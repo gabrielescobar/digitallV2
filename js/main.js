@@ -647,12 +647,12 @@ if ($('.home').length) {
 }
 
 function registerHomeNodes(n) {
-	console.log(n);
+
 	// // CREATE ONE PROJECT VARIABLE SET
 	// homeNodeID = $('.perch-info-nodes li:nth-child('+n+')').attr('data-home-node-id');
 	homeNodeX = $('.perch-info-nodes li:nth-child('+n+')').attr('data-position-x');
 	homeNodeY = $('.perch-info-nodes li:nth-child('+n+')').attr('data-position-y');
-	
+
 	homeNodeTitleOne = $('.perch-info-nodes li:nth-child('+n+') h4.perch-info-overlay-main-title').html();
 	homeNodeTitleTwo = $('.perch-info-nodes li:nth-child('+n+') h4.perch-info-overlay-secondary-title').html();
 	homeNodeContent =  $('.perch-info-nodes li:nth-child('+n+') h2.perch-info-overlay-text').html();
@@ -673,8 +673,8 @@ function populateNodes(n) {
 	thisNodeInfo = allHomeNodes[n];
 	$('.overlay-nodes .pano-icon:nth-child('+n+')').attr('data-pano-x', thisNodeInfo[1]);
 	$('.overlay-nodes .pano-icon:nth-child('+n+')').attr('data-pano-y', thisNodeInfo[2]);
-	$('.overlay-nodes .pano-icon:nth-child('+n+') h5').text(thisNodeInfo[4]);
-	$('.overlay-nodes .pano-icon:nth-child('+n+') h4').text(thisNodeInfo[3]);
+	$('.overlay-nodes .pano-icon:nth-child('+n+') h5').text(thisNodeInfo[3]);
+	$('.overlay-nodes .pano-icon:nth-child('+n+') h4').text(thisNodeInfo[4]);
 	nextNode = n+1;
 	if (nextNode == 20) {
 
@@ -712,7 +712,11 @@ function swapOverlayContent() {
 	thisNodeN = thisNodeLink.attr('data-n');
 	thisNode = allHomeNodes[thisNodeN];
 
-	$('.pano-overlay-content h4').text(thisNode[3]);
+	if (thisNode[3].indexOf("NUESTROS") > -1)
+		$('.pano-overlay-content h4').text("NUESTROS CLIENTES");
+	else{
+		$('.pano-overlay-content h4').text(thisNode[3]);
+	}
 	$('.pano-overlay-content h2').html(thisNode[5]);
 	$('.pano-overlay-content p').html(thisNode[6]);
 	$('.project-nav li:nth-child(1) h4').html(thisNode[3]);
