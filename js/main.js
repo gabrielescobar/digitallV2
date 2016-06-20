@@ -214,7 +214,7 @@ $(document).ready(function() {
 						location.href=linkURL;
 					},10);
 				},580);
-			}	
+			}
 		});
 
 		openPanoContent.on('click', function(e){
